@@ -1,5 +1,3 @@
-package Lista2;
-
 import java.util.Scanner;
 
 public class Exercicio10 {
@@ -14,8 +12,16 @@ public class Exercicio10 {
         Scanner in = new Scanner(System.in);
         System.out.println("Digite a idade do nadador");
         int idade = in.nextInt();
+        String resultado = "";
         if(idade >= 18){
-
-        } else if(idade < 18 )
+            resultado = "adulto";
+        } else if(idade >= 14 ){
+            resultado = "juvenil";
+        } else if (idade >= 9) {
+            resultado = "infantil";
+        } else {
+            resultado = "mirim";
+        }
+        System.out.printf("A categoria do nadador é: %s", resultado);
     }
 }
